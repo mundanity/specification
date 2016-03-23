@@ -1,0 +1,23 @@
+{
+    "name": "mundanity/specification",
+    "description": "A simple PHP based implementation of the specification pattern.",
+    "homepage": "https://github.com/mundanity/specification",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Owen Loy",
+            "email": "owen@mundanity.com"
+        }
+    ],
+    "require": {
+        "php": "~5.6 || ~7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mundanity\\Specification\\": "src/"
+        }
+    }
+}
