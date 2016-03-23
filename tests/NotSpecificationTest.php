@@ -9,7 +9,7 @@ class NotSpecificationTest extends PHPUnit_Framework_TestCase
     {
         $spec = $this->getMock('Mundanity\Specification\SpecificationInterface');
         $not  = new NotSpecification($spec);
-        $this->assertInstanceOf('Mundanity\Specification\CompositeSpecificationInterface', $not);
+        $this->assertInstanceOf('Mundanity\Specification\SpecificationInterface', $not);
     }
 
 

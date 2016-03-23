@@ -11,7 +11,7 @@ class AndSpecificationTest extends PHPUnit_Framework_TestCase
         $spec2 = $this->getMock('Mundanity\Specification\SpecificationInterface');
 
         $spec = new AndSpecification($spec1, $spec2);
-        $this->assertInstanceOf('Mundanity\Specification\CompositeSpecificationInterface', $spec);
+        $this->assertInstanceOf('Mundanity\Specification\SpecificationInterface', $spec);
     }
 
 

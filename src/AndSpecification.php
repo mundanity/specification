@@ -7,7 +7,7 @@ namespace Mundanity\Specification;
  * Provides a logical AND specification.
  *
  */
-class AndSpecification extends AbstractCompositeSpecification
+class AndSpecification extends AbstractSpecification
 {
     /**
      * @var SpecificationInterface

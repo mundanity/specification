@@ -1,18 +1,18 @@
 <?php
 
 
-class AbstractCompositeSpecificationTest extends PHPUnit_Framework_TestCase
+class AbstractSpecificationTest extends PHPUnit_Framework_TestCase
 {
     public function testInterface()
     {
-        $spec = $this->getMockForAbstractClass('Mundanity\Specification\AbstractCompositeSpecification');
-        $this->assertInstanceOf('Mundanity\Specification\CompositeSpecificationInterface', $spec);
+        $spec = $this->getMockForAbstractClass('Mundanity\Specification\AbstractSpecification');
+        $this->assertInstanceOf('Mundanity\Specification\SpecificationInterface', $spec);
     }
 
     public function testAndWith()
     {
         $and  = $this->getMock('Mundanity\Specification\SpecificationInterface');
-        $spec = $this->getMockForAbstractClass('Mundanity\Specification\AbstractCompositeSpecification');
+        $spec = $this->getMockForAbstractClass('Mundanity\Specification\AbstractSpecification');
         $this->assertInstanceOf('Mundanity\Specification\AndSpecification', $spec->andWith($and));
     }
 
@@ -20,14 +20,14 @@ class AbstractCompositeSpecificationTest extends PHPUnit_Framework_TestCase
     public function testOrWith()
     {
         $or   = $this->getMock('Mundanity\Specification\SpecificationInterface');
-        $spec = $this->getMockForAbstractClass('Mundanity\Specification\AbstractCompositeSpecification');
+        $spec = $this->getMockForAbstractClass('Mundanity\Specification\AbstractSpecification');
         $this->assertInstanceOf('Mundanity\Specification\OrSpecification', $spec->orWith($or));
     }
 
 
     public function testNot()
     {
-        $spec = $this->getMockForAbstractClass('Mundanity\Specification\AbstractCompositeSpecification');
+        $spec = $this->getMockForAbstractClass('Mundanity\Specification\AbstractSpecification');
         $this->assertInstanceOf('Mundanity\Specification\NotSpecification', $spec->not());
     }
 }

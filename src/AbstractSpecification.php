@@ -4,10 +4,10 @@ namespace Mundanity\Specification;
 
 
 /**
- * Implementation of a CompositeSpecificationInterface.
+ * Abstract base class implementing SpecificationInterface.
  *
  */
-abstract class AbstractCompositeSpecification implements CompositeSpecificationInterface
+abstract class AbstractSpecification implements SpecificationInterface
 {
     /**
      * {@inheritdoc}

@@ -5,7 +5,7 @@ A simple PHP based implementation of the specification pattern.
 
 ## Usage
 
-For basic usage, implement the [SpecificationInterface](src/SpecificationInterface.php).
+For basic usage, implement the [SpecificationInterface](src/SpecificationInterface.php) or subclass [AbstractSpecification](src/AbstractSpecification.php).
 
 ```php
 <?php
@@ -22,13 +22,13 @@ class CanDoFoo implements SpecificationInterface
 }
 ```
 
-In order to evaluate multiple specifications at once, subclass [AbstractCompositeSpecification](src/AbstractCompositeSpecification.php).
+Specifications can be evaluated together using the methods `andWith()`, `orWith()`, and `not()`.
 
 ```php
 <?php
 
-class BusinessRuleOne extends AbstractCompositeSpecification {}
-class BusinessRuleTwo extends AbstractCompositeSpecification {}
+class BusinessRuleOne extends AbstractSpecification {}
+class BusinessRuleTwo extends AbstractSpecification {}
 
 $spec1 = new BusinessRuleOne();
 $spec2 = new BusinessRuleTwo();

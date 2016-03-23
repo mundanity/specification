@@ -7,7 +7,7 @@ namespace Mundanity\Specification;
  * Provides a logical OR specification.
  *
  */
-class OrSpecification extends AbstractCompositeSpecification
+class OrSpecification extends AbstractSpecification
 {
     /**
      * @var SpecificationInterface

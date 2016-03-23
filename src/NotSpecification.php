@@ -7,7 +7,7 @@ namespace Mundanity\Specification;
  * Negates the passed in specification.
  *
  */
-class NotSpecification extends AbstractCompositeSpecification
+class NotSpecification extends AbstractSpecification
 {
     /**
      * @var SpecificationInterface
